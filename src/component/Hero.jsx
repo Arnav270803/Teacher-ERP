@@ -13,13 +13,18 @@ const Hero = ({ isDark }) => {
           backgroundSize: 'cover, 20px 20px'
         }}
       >
-        <div className='p-8 flex items-center justify-center h-full'>
-          <img 
-            src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop" 
-            alt="university image"
-            className="max-w-full max-h-full object-contain"
-          />
+
+{/*the above is just the grid code now below that is the hero time table section*/}
+
+
+        <div className='p-6 flex justify-between item-center'>
+            <div className=''>
+
+            </div>
+
         </div>
+
+
       </div>
     </div>
   );

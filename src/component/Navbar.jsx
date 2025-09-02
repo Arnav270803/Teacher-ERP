@@ -30,9 +30,10 @@ const Navbar = ({ isDark, toggleTheme }) => {
                 <a href="#" className={`${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-200 font-medium`}>
                   Announcement
                 </a>
-                <a href="#" className={`${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-200 font-medium`}>
-                  Time-Table
-                </a>
+                <div className={`${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-200 font-medium`}
+                >
+                  Calendar
+                </div>
                 <a href="#" className={`${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-200 font-medium`}>
                   Attendance
                 </a>

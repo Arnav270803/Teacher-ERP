@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import Navbar from './component/Navbar'
 import Hero from './component/Hero';
+import { Calendar } from 'lucide-react';
 
 const App = () => {
 
