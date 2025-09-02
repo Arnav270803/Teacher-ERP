@@ -1,22 +1,24 @@
-import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const Navbar = ({ isDark, toggleTheme }) => {
   return (
-    <div className={`w-full py-4 ${isDark ? 'bg-neutral-900/50' : 'bg-gray-50/50'}`}>
+    <div 
+      className={`w-full py-4 relative`}
+      style={{
+        backgroundImage: `radial-gradient(${isDark ? '#ffffff' : '#000000'} 1px, transparent 1px)`,
+        backgroundSize: '20px 20px'
+      }}
+    >
       <div className='max-w-5xl mx-auto px-4'>
-        <nav className={`w-full ${isDark ? 'bg-neutral-800' : 'bg-white'} rounded-2xl shadow-lg ${isDark ? 'border border-neutral-700/50' : 'border border-gray-100/50'} backdrop-blur-sm`}>
+        <nav className={`w-full ${isDark ? 'bg-neutral-800/80' : 'bg-white/80'} rounded-2xl shadow-lg ${isDark ? 'border border-neutral-700/50' : 'border border-gray-100/50'} backdrop-blur-md`}>
           <div className='px-6 lg:px-3'>
             <div className='flex items-center justify-between h-16'>
               {/* Logo Section */}
               <div className='flex items-center space-x-2'>
                 <div className='w-8 h-8'>
-                  <lord-icon
-                    src="https://cdn.lordicon.com/jeuxydnh.json"
-                    trigger="hover"
-                    stroke="light"
-                    colors={isDark ? "primary:#ffffff,secondary:#08a88a" : "primary:#242424,secondary:#08a88a"}>
-                  </lord-icon>
+                  <div className={`w-8 h-8 rounded-full ${isDark ? 'bg-white' : 'bg-black'} flex items-center justify-center`}>
+                    <span className={`text-sm font-bold ${isDark ? 'text-black' : 'text-white'}`}>H</span>
+                  </div>
                 </div>
                 <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   Home
@@ -57,21 +59,21 @@ const Navbar = ({ isDark, toggleTheme }) => {
                   )}
                 </button>
 
-                <Button variant="ghost" className={`${isDark ? 'text-gray-300 hover:text-white hover:bg-neutral-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} font-medium`}>
+                <button className={`${isDark ? 'text-gray-300 hover:text-white hover:bg-neutral-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} font-medium px-4 py-2 rounded-lg transition-colors`}>
                   Login
-                </Button>
-                <Button className={`${isDark ? 'bg-white hover:bg-gray-200 text-black' : 'bg-black hover:bg-gray-800 text-white'} px-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-200`}>
+                </button>
+                <button className={`${isDark ? 'bg-white hover:bg-gray-200 text-black' : 'bg-black hover:bg-gray-800 text-white'} px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 font-medium`}>
                   Sign Up
-                </Button>
+                </button>
               </div>
 
               {/* Mobile Menu Button */}
               <div className='md:hidden'>
-                <Button variant="ghost" size="sm" className={`${isDark ? 'hover:bg-neutral-700' : 'hover:bg-gray-50'}`}>
+                <button className={`${isDark ? 'hover:bg-neutral-700' : 'hover:bg-gray-50'} p-2 rounded-lg`}>
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
-                </Button>
+                </button>
               </div>
             </div>
           </div>
