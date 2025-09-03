@@ -10,16 +10,20 @@ const Navbar = ({ isDark, toggleTheme }) => {
       }}
     >
       <div className='max-w-5xl mx-auto px-4'>
-        <nav className={`w-full ${isDark ? 'bg-neutral-800/80' : 'bg-white/80'} rounded-2xl shadow-lg ${isDark ? 'border border-neutral-700/50' : 'border border-gray-100/50'} backdrop-blur-md`}>
+        {/*nav is a html element that is used to define a section of a webpage that contains navigation links  */}
+        <nav className={`w-full ${isDark ? 'bg-neutral-800/80' : 'bg-white/80'} rounded-2xl shadow-lg ${isDark ? 'border border-neutral-700/50' : 'border border-gray-100/50'} backdrop-blur-md`}> 
           <div className='px-6 lg:px-3'>
             <div className='flex items-center justify-between h-16'>
               {/* Logo Section */}
-              <div className='flex items-center space-x-2'>
+              <div className='flex items-center cursor-pointer space-x-2'>
                 <div className='w-8 h-8'>
-                  <div className={`w-8 h-8 rounded-full ${isDark ? 'bg-white' : 'bg-black'} flex items-center justify-center`}>
-                    <span className={`text-sm font-bold ${isDark ? 'text-black' : 'text-white'}`}>H</span>
-                  </div>
-                </div>
+                     <lord-icon
+                        src="https://cdn.lordicon.com/jeuxydnh.json"
+                        trigger="loop"
+                        state="loop-smoke"
+                        colors="primary:#109173,secondary:#848484">
+                      </lord-icon>                 
+                   </div>
                 <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   Home
                 </span>
@@ -60,10 +64,10 @@ const Navbar = ({ isDark, toggleTheme }) => {
                   )}
                 </button>
 
-                <button className={`${isDark ? 'text-gray-300 hover:text-white hover:bg-neutral-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} font-medium px-4 py-2 rounded-lg transition-colors`}>
+                <button className={`${isDark ? 'text-gray-300 hover:text-white cursor-pointer hover:bg-neutral-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} font-medium cursor-pointer px-4 py-2 rounded-lg transition-colors`}>
                   Login
                 </button>
-                <button className={`${isDark ? 'bg-white hover:bg-gray-200 text-black' : 'bg-black hover:bg-gray-800 text-white'} px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 font-medium`}>
+                <button className={`${isDark ? 'bg-white hover:bg-gray-200  text-black' : 'bg-black hover:bg-gray-800 text-white'} px-6 py-2 rounded-lg cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 font-medium`}>
                   Sign Up
                 </button>
               </div>

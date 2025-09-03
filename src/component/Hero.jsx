@@ -98,7 +98,7 @@ const HeroWithCards = ({ isDark }) => {
           backgroundSize: 'cover, 20px 20px'
         }}
       >
-        <div className='p-6 flex justify-between item-center'>
+        <div className='p-6 flex justify-evenly item-center'>
           <div className=''>
             {/* Your existing hero content can go here */}
             
@@ -127,6 +127,7 @@ const HeroWithCards = ({ isDark }) => {
                 time="2:00 - 2:45 PM"
                 isDark={isDark}
               />
+
             </div>
           </div>
         </div>
