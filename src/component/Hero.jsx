@@ -85,7 +85,7 @@ const TimetableCard = ({
 };
 
 // Demo showing cards with your exact Hero background
-const HeroWithCards = ({ isDark }) => {
+const HeroWithCards = ({ isDark = false }) => {
   return (
     <div className="w-full h-screen">
       <div 
@@ -127,8 +127,63 @@ const HeroWithCards = ({ isDark }) => {
                 time="2:00 - 2:45 PM"
                 isDark={isDark}
               />
-
             </div>
+          </div>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className='max-w-5xl mx-auto px-4 pb-8'>
+          <div className='flex items-center justify-center gap-6'>
+            <button className={`
+              relative overflow-hidden rounded-xl px-8 py-4 border backdrop-blur-sm
+              transition-all duration-300 hover:scale-105 font-medium
+              ${isDark 
+                ? 'bg-gray-800/80 border-gray-700 text-white shadow-[0_20px_40px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_25px_50px_-15px_rgba(0,0,0,0.9)]' 
+                : 'bg-white/80 border-gray-200 text-gray-900 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.4)] hover:shadow-[0_25px_50px_-15px_rgba(0,0,0,0.5)]'
+              }
+            `}>
+              <div className={`
+                absolute top-0 left-0 w-full h-1 
+                ${isDark ? 'bg-green-400' : 'bg-green-500'}
+              `} />
+              <span className={`${isDark ? 'text-green-300' : 'text-green-600'}`}>
+                Schedule
+              </span>
+            </button>
+
+            <button className={`
+              relative overflow-hidden rounded-xl px-8 py-4 border backdrop-blur-sm
+              transition-all duration-300 hover:scale-105 font-medium
+              ${isDark 
+                ? 'bg-gray-800/80 border-gray-700 text-white shadow-[0_20px_40px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_25px_50px_-15px_rgba(0,0,0,0.9)]' 
+                : 'bg-white/80 border-gray-200 text-gray-900 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.4)] hover:shadow-[0_25px_50px_-15px_rgba(0,0,0,0.5)]'
+              }
+            `}>
+              <div className={`
+                absolute top-0 left-0 w-full h-1 
+                ${isDark ? 'bg-green-400' : 'bg-green-500'}
+              `} />
+              <span className={`${isDark ? 'text-green-300' : 'text-green-600'}`}>
+                Attendance
+              </span>
+            </button>
+
+            <button className={`
+              relative overflow-hidden rounded-xl px-8 py-4 border backdrop-blur-sm
+              transition-all duration-300 hover:scale-105 font-medium
+              ${isDark 
+                ? 'bg-gray-800/80 border-gray-700 text-white shadow-[0_20px_40px_-12px_rgba(0,0,0,0.8)] hover:shadow-[0_25px_50px_-15px_rgba(0,0,0,0.9)]' 
+                : 'bg-white/80 border-gray-200 text-gray-900 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.4)] hover:shadow-[0_25px_50px_-15px_rgba(0,0,0,0.5)]'
+              }
+            `}>
+              <div className={`
+                absolute top-0 left-0 w-full h-1 
+                ${isDark ? 'bg-green-400' : 'bg-green-500'}
+              `} />
+              <span className={`${isDark ? 'text-green-300' : 'text-green-600'}`}>
+                Updates
+              </span>
+            </button>
           </div>
         </div>
       </div>
