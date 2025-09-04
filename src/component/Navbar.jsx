@@ -25,7 +25,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
                       </lord-icon>                 
                    </div>
                 <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  Home
+                  Rollcall
                 </span>
               </div>
 
