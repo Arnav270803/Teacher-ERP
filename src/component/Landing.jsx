@@ -112,6 +112,32 @@ const Landing = ({ isDark }) => {
              </div>
            </>
          )}
+            {/*ignore this just text here */}
+         <div className=' mt-110 flex justify-center '>
+                Your Academic Journey Starts Here
+         </div>
+        {/*ignore this just text here */}
+         <div className='py-8 flex text-3xl font-bold justify-center '>
+            Manage your academic life with{' '}
+            <span className={`ml-2 transition-all duration-300 cursor-pointer hover:scale-120 ${
+              isDark 
+                ? 'hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)]'
+                : 'text-blue-500 hover:text-blue-400 hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]'
+            }`} style={isDark ? { color: '#08a88a' } : {}}>
+              RollCall
+            </span>
+         </div>
+
+            {/*div for login and signup button  */}
+            <div className='flex justify-center gap-40 py-'>
+                <button className={`${isDark ? 'bg-neutral-800 border-gray-600 text-white' : 'bg-gray-100 border-gray-900 text-black'} border font-bold px-10 py-2 rounded-md font-medium cursor-pointer hover:scale-110 duration-300`}>
+                    Login
+                </button>
+
+                <button className={`${isDark ? 'bg-gray-100 border-gray-500 text-black' : 'bg-black border-gray-900 text-white'} border font-bold px-10 py-2 rounded-md font-medium cursor-pointer hover:scale-110 duration-300`}>
+                    Sign up
+                </button>
+            </div>
     </div>
     </div>
   )
