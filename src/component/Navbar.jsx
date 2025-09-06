@@ -5,7 +5,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
     <div 
       className={`w-full py-4 relative`}
       style={{
-        backgroundImage: `radial-gradient(${isDark ? '#ffffff' : '#000000'} 1px, transparent 1px)`,
+        backgroundImage: `radial-gradient(${isDark ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.4)'} 1px, transparent 1px)`,
         backgroundSize: '20px 20px'
       }}
     >
