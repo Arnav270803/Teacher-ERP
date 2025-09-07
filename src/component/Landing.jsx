@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../context/AppContext' // Add this import
 
 const Landing = ({ isDark }) => {
+  const { setShowLogin } = useContext(AppContext); // Add this line
+
   return (
     <div className={`${isDark ? 'bg-neutral-900 text-white' : 'bg-white text-gray-900'} min-h-screen transition-colors duration-300`}>
    {/*Div for the background dotted grid pattern - Version 1: Slightly faded grid*/}
@@ -130,7 +133,10 @@ const Landing = ({ isDark }) => {
 
             {/*div for login and signup button  */}
             <div className='flex justify-center gap-40 py-'>
-                <button className={`${isDark ? 'bg-neutral-800 border-gray-600 text-white' : 'bg-gray-100 border-gray-900 text-black'} border font-bold px-10 py-2 rounded-md font-medium cursor-pointer hover:scale-110 duration-300`}>
+                <button 
+                  onClick={() => setShowLogin(true)} // Add onClick handler
+                  className={`${isDark ? 'bg-neutral-800 border-gray-600 text-white' : 'bg-gray-100 border-gray-900 text-black'} border font-bold px-10 py-2 rounded-md font-medium cursor-pointer hover:scale-110 duration-300`}
+                >
                     Login
                 </button>
 

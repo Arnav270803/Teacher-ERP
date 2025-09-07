@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../context/AppContext' // Add this import
 
 const Navbar = ({ isDark, toggleTheme }) => {
+  const { setShowLogin } = useContext(AppContext); // Add this line
+
   return (
     <div 
       className={`w-full py-4 relative`}
@@ -69,7 +72,10 @@ const Navbar = ({ isDark, toggleTheme }) => {
                   )}
                 </button>
 
-                <button className={`${isDark ? 'text-gray-300 hover:text-white cursor-pointer hover:bg-neutral-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} font-medium cursor-pointer px-4 py-2 rounded-lg transition-colors`}>
+                <button 
+                  onClick={() => setShowLogin(true)} // Add onClick handler
+                  className={`${isDark ? 'text-gray-300 hover:text-white cursor-pointer hover:bg-neutral-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} font-medium cursor-pointer px-4 py-2 rounded-lg transition-colors`}
+                >
                   Login
                 </button>
                 <button className={`${isDark ? 'bg-white hover:bg-gray-200  text-black' : 'bg-black hover:bg-gray-800 text-white'} px-6 py-2 rounded-lg cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 font-medium`}>

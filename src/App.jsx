@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import Navbar from '../src/component/Navbar'
 import LandingPage from './Pages/LandingPage'
-import { LogIn } from 'lucide-react'
 import Login from './component/Login'
+import { AppContext } from './context/AppContext'
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
-  
+  const { showLogin } = useContext(AppContext);
+
   const toggleTheme = () => {
     setIsDark(!isDark);
   };
@@ -19,9 +20,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage isDark={isDark} />} />
         <Route path="/Home" element={<Home isDark={isDark} />} />
-        <Route path="/Login" element={<Login isDark={isDark} />} />
-
       </Routes>
+      {/* Render Login modal when showLogin is true */}
+      {showLogin && <Login />}
     </div>
   )
 }
