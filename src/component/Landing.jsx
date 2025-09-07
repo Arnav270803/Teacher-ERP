@@ -117,7 +117,7 @@ const Landing = ({ isDark }) => {
                 Your Academic Journey Starts Here
          </div>
         {/*ignore this just text here */}
-         <div className='py-8 flex text-4xl font-bold justify-center '>
+         <div className='py-5 flex text-4xl font-bold justify-center '>
             Manage your academic life with{' '}
             <span className={`ml-2 transition-all duration-300 cursor-pointer hover:scale-120 ${
               isDark 

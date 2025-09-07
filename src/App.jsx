@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import Navbar from '../src/component/Navbar'
 import LandingPage from './Pages/LandingPage'
+import { LogIn } from 'lucide-react'
+import Login from './component/Login'
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -17,6 +19,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage isDark={isDark} />} />
         <Route path="/Home" element={<Home isDark={isDark} />} />
+        <Route path="/Login" element={<Login isDark={isDark} />} />
+
       </Routes>
     </div>
   )
