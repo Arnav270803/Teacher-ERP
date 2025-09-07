@@ -24,9 +24,14 @@ const Navbar = ({ isDark, toggleTheme }) => {
                         colors="primary:#109173,secondary:#848484">
                       </lord-icon>                 
                    </div>
-                <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                <>
+                <link 
+                  href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" 
+                />
+                <span className={`text-xl  ${isDark ? 'text-white' : 'text-gray-900'}`} style={{fontFamily: 'Sacramento, cursive'}}>
                   Rollcall
                 </span>
+                </>
               </div>
 
               {/* Navigation Links - Desktop */}

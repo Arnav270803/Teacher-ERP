@@ -113,11 +113,11 @@ const Landing = ({ isDark }) => {
            </>
          )}
             {/*ignore this just text here */}
-         <div className=' mt-110 flex justify-center '>
+         <div className=' mt-100 flex justify-center '>
                 Your Academic Journey Starts Here
          </div>
         {/*ignore this just text here */}
-         <div className='py-8 flex text-3xl font-bold justify-center '>
+         <div className='py-8 flex text-4xl font-bold justify-center '>
             Manage your academic life with{' '}
             <span className={`ml-2 transition-all duration-300 cursor-pointer hover:scale-120 ${
               isDark 
@@ -138,6 +138,8 @@ const Landing = ({ isDark }) => {
                     Sign up
                 </button>
             </div>
+            <div className="w-full h-px bg-gray-800 mt-20 "></div>
+
     </div>
     </div>
   )
