@@ -1,11 +1,13 @@
 import React, { useState, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
-import Navbar from '../src/component/Navbar'
 import LandingPage from './Pages/LandingPage'
 import Login from './component/Login'
 import { AppContext } from './context/AppContext'
 import AdminHomePage from './Pages/AdminHomePage'
+import AdminStudent from './Pages/AdminStudent'
+import AdminClasses from './Pages/AdminClasses'
+import AdminSemester from './Pages/AdminSemester'
 
 const App = ({isDark}) => {
   const { showLogin } = useContext(AppContext);
@@ -18,7 +20,9 @@ const App = ({isDark}) => {
         <Route path="/" element={<LandingPage isDark={isDark} />} />
         <Route path="/Home" element={<Home isDark={isDark} />} />
         <Route path="/adminhome" element={<AdminHomePage />} />
-
+        <Route path="/semesterAD" element={<AdminSemester />} />
+        <Route path="/classesAD" element={<AdminClasses />} />
+        <Route path="/StudentsAD" element={<AdminStudent />} />
       </Routes>
       {/* Render Login modal when showLogin is true */}
       {showLogin && <Login />}
