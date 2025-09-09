@@ -3,7 +3,8 @@ import Hero from '../component/Hero';
 import Navbar from '@/component/Navbar';
 
 const Home = () => {
-          const [isDark, setIsDark] = useState(false);
+  {/*Dark theme Logic */}
+    const [isDark, setIsDark] = useState(false);
         
     const toggleTheme = () => {
       setIsDark(!isDark);

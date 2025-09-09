@@ -3,8 +3,10 @@ import Navbar from '@/component/Navbar'
 import React, { useState } from 'react'
 
 const LandingPage = () => {
+
   {/*I created a usestate state 2 times , in future it can cause problems , for context had to change it  */}
-        const [isDark, setIsDark] = useState(false);
+
+  const [isDark, setIsDark] = useState(false);
       
   const toggleTheme = () => {
     setIsDark(!isDark);
