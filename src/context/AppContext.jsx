@@ -7,13 +7,15 @@ const AppContextProvider = (props) => { // Fixed: Renamed to avoid conflict
     const [user, setUser] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
     const navigate = useNavigate();
+    const BACKEND_URL = process.env.REACT_BACKEND_URL || 'http://localhost:3000/'
 
     const value = {
         user,
         setUser,
         setShowLogin,
         showLogin,
-        navigate
+        navigate,
+        BACKEND_URL
     };
 
     return (
