@@ -22,7 +22,7 @@ const App = ({isDark}) => {
         <Route path="/adminhome" element={<AdminHomePage />} />
         <Route path="/semesterAD" element={<AdminSemester />} />
         <Route path="/classesAD" element={<AdminClasses />} />
-        <Route path="/StudentsAD" element={<AdminStudent />} />
+        <Route path="/studentsAD" element={<AdminStudent />} />
       </Routes>
       {/* Render Login modal when showLogin is true */}
       {showLogin && <Login />}
