@@ -7,13 +7,15 @@ const AppContextProvider = (props) => {
     const [user, setUser] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
     const navigate = useNavigate();
+    const BACKEND_API_URL =  'http://localhost:3000/'
 
     const value = {
         user,
         setUser,
         setShowLogin,
         showLogin,
-        navigate
+        navigate,
+        BACKEND_API_URL
     };
 
     return (
