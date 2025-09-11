@@ -7,7 +7,7 @@ const AppContextProvider = (props) => { // Fixed: Renamed to avoid conflict
     const [user, setUser] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
     const navigate = useNavigate();
-    const BACKEND_URL = process.env.REACT_BACKEND_URL || 'http://localhost:3000/'
+    const BACKEND_API_URL =  'http://localhost:3000/'
 
     const value = {
         user,
@@ -15,7 +15,7 @@ const AppContextProvider = (props) => { // Fixed: Renamed to avoid conflict
         setShowLogin,
         showLogin,
         navigate,
-        BACKEND_URL
+        BACKEND_API_URL
     };
 
     return (
